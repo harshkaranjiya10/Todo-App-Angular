@@ -1,13 +1,22 @@
+// src/app/app.component.ts
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { TodosComponent } from './MyComponents/todos/todos.component';
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [
+    TodosComponent
+  ]
 })
 export class AppComponent {
-  title = 'todo-ng';
+  title = '';
+  desc = '';
+  constructor() {
+    /*  setTimeout(() => {
+      this.title = "Harsh Karanjiya"
+    }, 2000);
+ */
+  }
 }
